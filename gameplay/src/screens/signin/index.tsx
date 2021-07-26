@@ -6,12 +6,16 @@ import ilustrationPng from "../../assets/illustration.png"
 export function Signin() {
     const [text, setText] = useState("")
     return (
-        <View>
-            <Image source={ilustrationPng}/>
-            <Text>{text}</Text>
-            <TextInput onChangeText={(value) => setText(value)} style={style.input} />
+        <View style={style.container}>
+            <Image source={ilustrationPng} />
+            <View style={style.content}>
+                <Text>
+                Hello World{`\n`}
+                React-Native{`\n`}
+                Rocketseat
+                </Text>
+            </View>
         </View>
     );
 }
 
-    
