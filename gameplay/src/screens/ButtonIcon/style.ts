@@ -18,9 +18,6 @@ export const style = StyleSheet.create({
         padding: 15,
         borderColor: theme.colors.line
     },
-    image: {
-
-    },
     title: {
         color: theme.colors.heading
     }

@@ -22,7 +22,7 @@ export function Signin() {
                     favoritos com seus amigos
                 </Text>
             </View>
-            <ButtonIcon />
+            <ButtonIcon activeOpacity={0.7} title={"Entrar com o Discord"}/>
         </View>
     );
 }
