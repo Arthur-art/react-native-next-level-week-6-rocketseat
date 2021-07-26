@@ -1,18 +1,24 @@
-import React, { useState } from "react"
-import { View, StyleSheet, Text, TextInput, Image } from "react-native"
+import React from "react"
+import { View, StyleSheet, Text, TextInput, Image, StatusBar } from "react-native"
 import { style } from "./styles";
 import ilustrationPng from "../../assets/illustration.png"
 
 export function Signin() {
-    const [text, setText] = useState("")
     return (
         <View style={style.container}>
-            <Image source={ilustrationPng} />
+            <StatusBar
+                barStyle="light-content"
+            />
+            <Image resizeMode={"stretch"} style={style.image} source={ilustrationPng} />
             <View style={style.content}>
-                <Text>
-                Hello World{`\n`}
-                React-Native{`\n`}
-                Rocketseat
+                <Text style={style.title}>
+                    Organize{`\n`}
+                    suas jogatinas{`\n`}
+                    facilmente
+                </Text>
+                <Text style={style.subtitle}>
+                    Crie grupos para jogar seus games{`\n`}
+                    favoritos com seus amigos
                 </Text>
             </View>
         </View>
