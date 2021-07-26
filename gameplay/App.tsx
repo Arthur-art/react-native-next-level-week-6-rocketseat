@@ -1,18 +1,13 @@
 import React from "react"
 import { View, Text, StyleSheet } from "react-native"
+import { Signin } from "./src/screens/signin/"
+import { global } from "../gameplay/global";
 
 export default function App() {
   return (
-    <View style={style.container}>
-      <Text>React Native</Text>
+    <View style={global.container}>
+      <Signin />
     </View>
   );
 }
 
-const style = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  }
-})
