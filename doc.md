@@ -8,3 +8,5 @@
 
 # Iniciando projeto com expo
 - expo init nomeDoProjeto
+- blanck (Typescript)
+- expo start
