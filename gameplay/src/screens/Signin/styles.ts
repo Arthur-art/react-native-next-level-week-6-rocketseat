@@ -6,7 +6,8 @@ export const style = StyleSheet.create({
         flex: 1,
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: theme.colors.secondary100
+        backgroundColor: theme.colors.secondary100,
+        padding: 10
     },
     input: {
         width: 200,
@@ -25,9 +26,7 @@ export const style = StyleSheet.create({
     },
     subtitle: {
         color: theme.colors.heading,
-        textAlign:"center",
+        textAlign: "center",
         fontSize: 15
-    },
-    image:{
     }
 })

@@ -10,7 +10,7 @@ export function Signin() {
             <StatusBar
                 barStyle="light-content"
             />
-            <Image resizeMode={"stretch"} style={style.image} source={ilustrationPng} />
+            <Image resizeMode={"stretch"} source={ilustrationPng} />
             <View style={style.content}>
                 <Text style={style.title}>
                     Organize{`\n`}
@@ -22,7 +22,7 @@ export function Signin() {
                     favoritos com seus amigos
                 </Text>
             </View>
-            <ButtonIcon activeOpacity={0.7} title={"Entrar com o Discord"}/>
+            <ButtonIcon activeOpacity={0.7} title={"Entrar com o Discord"} />
         </View>
     );
 }
