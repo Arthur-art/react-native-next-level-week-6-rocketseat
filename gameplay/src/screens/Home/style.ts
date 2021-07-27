@@ -11,7 +11,7 @@ export const style = StyleSheet.create({
         height: "10%",
         alignItems:'center',
         justifyContent: 'center',
-        marginTop: "20%"
+        marginTop: "10%"
 
     },
     title:{
