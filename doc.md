@@ -15,3 +15,7 @@
 - https://docs.expo.io/guides/using-custom-fonts/#using-a-google-font
 - expo install expo-font @expo-google-fonts/inter
 - expo install @expo-google-fonts/rajdhani
+
+# Trabalhando com expo-app-loading para manter a splash enquanto o app não carrega todas as funcionalidades
+- https://docs.expo.io/versions/latest/sdk/app-loading/
+- expo install expo-app-loading
