@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, View } from "react-native";
 import { style } from "./style"
-import { Profile } from "../Profile"
+import { Profile } from "../../components/Profile"
 
 export function Home() {
 

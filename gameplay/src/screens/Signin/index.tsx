@@ -2,7 +2,7 @@ import React from "react"
 import { View, StyleSheet, Text, TextInput, Image, StatusBar } from "react-native"
 import { style } from "./styles";
 import ilustrationPng from "../../assets/illustration.png"
-import { ButtonIcon } from "../ButtonIcon";
+import { ButtonIcon } from "../../components/ButtonIcon";
 
 export function Signin() {
     return (
