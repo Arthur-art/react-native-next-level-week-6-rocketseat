@@ -23,7 +23,8 @@
 # Trabalhando com cores linear-gradiente
 - expo install expo-linear-gradient
 
-# Trabalhando com react-navigation
+# Trabalhando com react-navigation / navigator stack - navegação em pilha
 - https://reactnavigation.org/docs/getting-started/
 - yarn add @react-navigation/native
 - expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
+- yarn add @react-navigation/stack
