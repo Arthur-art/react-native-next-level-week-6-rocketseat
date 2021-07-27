@@ -7,9 +7,6 @@ import { ButtonIcon } from "../ButtonIcon";
 export function Signin() {
     return (
         <View style={style.container}>
-            <StatusBar
-                barStyle="light-content"
-            />
             <Image resizeMode={"stretch"} source={ilustrationPng} />
             <View style={style.content}>
                 <Text style={style.title}>

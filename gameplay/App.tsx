@@ -1,11 +1,11 @@
 import React from "react";
-import { View } from "react-native";
+import { StatusBar } from "react-native";
 import { Signin } from "./src/screens/Signin";
-import { global } from "../gameplay/global";
 import { useFonts } from "expo-font";
 import { Inter_400Regular, Inter_500Medium } from "@expo-google-fonts/inter";
 import { Rajdhani_500Medium, Rajdhani_700Bold } from "@expo-google-fonts/rajdhani";
 import AppLoading from "expo-app-loading"
+import { Background } from "./src/screens/Background";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -20,9 +20,14 @@ export default function App() {
   }
 
   return (
-    <View style={global.container}>
-      <Signin />
-    </View>
+    <>
+      <Background>
+        <StatusBar
+          barStyle="light-content"
+        />
+        <Signin />
+      </Background>
+    </>
   );
 }
 

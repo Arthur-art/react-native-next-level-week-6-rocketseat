@@ -19,3 +19,6 @@
 # Trabalhando com expo-app-loading para manter a splash enquanto o app não carrega todas as funcionalidades
 - https://docs.expo.io/versions/latest/sdk/app-loading/
 - expo install expo-app-loading
+
+# Trabalhando com cores linear-gradiente
+- expo install expo-linear-gradient
