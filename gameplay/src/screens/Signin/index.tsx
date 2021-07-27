@@ -3,8 +3,16 @@ import { View, StyleSheet, Text, TextInput, Image, StatusBar } from "react-nativ
 import { style } from "./styles";
 import ilustrationPng from "../../assets/illustration.png"
 import { ButtonIcon } from "../../components/ButtonIcon";
+import { useNavigation } from "@react-navigation/core";
 
 export function Signin() {
+
+    const navigation = useNavigation();
+
+    const handleSignin = () => {
+        navigation.navigate('Home')
+    }
+
     return (
         <View style={style.container}>
             <Image resizeMode={"stretch"} source={ilustrationPng} />
@@ -19,7 +27,7 @@ export function Signin() {
                     favoritos com seus amigos
                 </Text>
             </View>
-            <ButtonIcon activeOpacity={0.7} title={"Entrar com o Discord"} />
+            <ButtonIcon onPress={handleSignin} activeOpacity={0.7} title={"Entrar com o Discord"} />
         </View>
     );
 }
