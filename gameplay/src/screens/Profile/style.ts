@@ -4,10 +4,12 @@ import { theme } from "../../../theme"
 export const style = StyleSheet.create({
     container: {
         flexDirection: "row",
-        width: "90%"
+        width: "90%",
+        alignItems:"center",
     },
     user: {
-        flexDirection: "row"
+        flexDirection: "row",
+        marginLeft: 10
     },
     greeting: {
         color: theme.colors.heading,
@@ -22,6 +24,7 @@ export const style = StyleSheet.create({
     },
     message: {
         color: theme.colors.heading,
-        fontFamily: theme.fonts.text400
+        fontFamily: theme.fonts.text400,
+        marginLeft: 10
     }
 })
