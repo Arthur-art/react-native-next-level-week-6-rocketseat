@@ -31,3 +31,9 @@
 
 # Trabalhando com icons.expo.fyi
 - https://icons.expo.fyi/
+
+
+# Trabalhando com expo svg e react-native-svg-transformer
+- expo install react-native-svg
+- https://github.com/kristerkari/react-native-svg-transformer
+- yarn add --dev react-native-svg-transformer

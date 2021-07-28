@@ -5,15 +5,16 @@ export const style = StyleSheet.create({
     container: {
         flex: 1,
     },
-    header:{
+    header: {
         width: "100%",
         height: "10%",
-        alignItems:'center',
+        alignItems: 'center',
         justifyContent: 'center',
         marginTop: "10%",
-
+        flexDirection: "row",
+        padding: 20
     },
-    title:{
+    title: {
         color: theme.colors.heading
     }
 })
