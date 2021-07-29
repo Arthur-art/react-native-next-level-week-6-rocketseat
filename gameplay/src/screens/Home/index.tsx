@@ -4,6 +4,7 @@ import { style } from "./style"
 import { Profile } from "../../components/Profile"
 import { ButtonAdd } from "../../components/ButtonAdd";
 import { CategorySelect } from "../../components/CategorySelect";
+import { ListHeader } from "../../components/ListHeader";
 
 export function Home() {
 
@@ -19,6 +20,7 @@ export function Home() {
                 <ButtonAdd />
             </View>
             <CategorySelect categorySelected={category} setCategory={handleCategorySelected} />
+            <ListHeader title={"Partidas agendadas"} subtitle={"Total 6"} />
         </View>
     )
 }
