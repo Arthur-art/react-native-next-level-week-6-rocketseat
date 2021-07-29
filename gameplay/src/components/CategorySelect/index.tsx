@@ -4,7 +4,12 @@ import { categories } from "../../utils/categories"
 import { Category } from "../Category"
 import { style } from "./style"
 
-export function CategorySelect() {
+type Props = {
+    categorySelected: string;
+    setCategory: (categoryId: string) => void;
+}
+
+export function CategorySelect({ categorySelected, setCategory }: Props) {
 
     return (
         <ScrollView
@@ -14,7 +19,12 @@ export function CategorySelect() {
             contentContainerStyle={{ paddingRight: 40 }}
         >
             {categories.map(({ icon, id, title }) => {
-                return <Category key={id} title={title} icon={icon} checked={false} />
+                return <Category
+                    onPress={() => setCategory(id)}
+                    key={id}
+                    title={title}
+                    icon={icon}
+                    checked={id === categorySelected} />
             })}
         </ScrollView>
     )
