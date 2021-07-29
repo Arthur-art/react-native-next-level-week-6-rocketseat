@@ -15,7 +15,7 @@ type Props = RectButtonProps & {
 export function Category({
     title,
     icon: Icon,
-    checked = false,
+    checked,
     ...rest
 }: Props) {
 
@@ -24,14 +24,14 @@ export function Category({
             <LinearGradient
                 style={style.container}
                 colors={[theme.colors.secondary50, theme.colors.secondary70]}>
-
                 <View style={[style.content, { opacity: checked ? 1 : 0.4 }]}>
-                    <View style={[checked ? style.checked : style.check]}>
-                        <Icon width={48} height={48} />
-                    </View>
-                    <Text style={style.title}>{title}</Text>
-                </View>
 
+                    <View style={checked ? style.checked : style.check} />
+
+                    <Icon width={40} height={40} />
+                    <Text style={style.title}>{title}</Text>
+
+                </View>
             </LinearGradient>
         </RectButton>
     )

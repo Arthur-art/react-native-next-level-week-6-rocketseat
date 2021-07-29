@@ -12,8 +12,8 @@ type Props = {
 }
 
 export const categories: Props[] = [
-    { id: '1', title: "Ranqueada", icon: Ranked },
-    { id: '2', title: "Ranqueada", icon: Training },
-    { id: '3', title: "Ranqueada", icon: Duel },
-    { id: '4', title: "Ranqueada", icon: Fun }
+    { id: '1', title: "Ranked", icon: Ranked },
+    { id: '2', title: "Training", icon: Training },
+    { id: '3', title: "Duel", icon: Duel },
+    { id: '4', title: "Fun", icon: Fun }
 ]
