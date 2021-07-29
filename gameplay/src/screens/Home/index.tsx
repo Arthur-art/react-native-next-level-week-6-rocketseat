@@ -5,6 +5,7 @@ import { Profile } from "../../components/Profile"
 import { ButtonAdd } from "../../components/ButtonAdd";
 import { CategorySelect } from "../../components/CategorySelect";
 import { ListHeader } from "../../components/ListHeader";
+import { Appointments } from "../../components/Appointments";
 
 export function Home() {
 
@@ -40,7 +41,7 @@ export function Home() {
                 data={appointments}
                 keyExtractor={item => item.id}
                 renderItem={({ item }) => (
-                    <Text>{item.description}</Text>
+                    <Appointments data={item} />
                 )} />
         </View>
     )
