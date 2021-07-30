@@ -7,6 +7,7 @@ import { CategorySelect } from "../../components/CategorySelect";
 import { ListHeader } from "../../components/ListHeader";
 import { Appointments } from "../../components/Appointments";
 import PlayerSvg from "../../assets/player.svg"
+import { ListDivider } from "../../components/ListDivider";
 
 export function Home() {
 
@@ -20,6 +21,42 @@ export function Home() {
                 owner: true
             },
             category: "1",
+            date: "22/06 às 20:40h",
+            description: "Que cara bom vei, que cara excelente"
+        },
+        {
+            id: "2",
+            guild: {
+                id: "2",
+                name: "Lendários",
+                icon: PlayerSvg,
+                owner: true
+            },
+            category: "1",
+            date: "22/06 às 20:40h",
+            description: "Que cara bom vei, que cara excelente"
+        },
+        {
+            id: "3",
+            guild: {
+                id: "3",
+                name: "Lendários",
+                icon: PlayerSvg,
+                owner: true
+            },
+            category: "1",
+            date: "22/06 às 20:40h",
+            description: "Que cara bom vei, que cara excelente"
+        },
+        {
+            id: "4",
+            guild: {
+                id: "1",
+                name: "Lendários",
+                icon: PlayerSvg,
+                owner: true
+            },
+            category: "4",
             date: "22/06 às 20:40h",
             description: "Que cara bom vei, que cara excelente"
         }
@@ -43,7 +80,8 @@ export function Home() {
                 keyExtractor={item => item.id}
                 renderItem={({ item }) => (
                     <Appointments data={item} />
-                )} />
+                )}
+                ItemSeparatorComponent={() => <ListDivider />} />
         </View>
     )
 }
