@@ -6,7 +6,8 @@ export const style = StyleSheet.create({
         width: "100%",
         flexDirection: "row",
         justifyContent: "space-between",
-        paddingHorizontal: 24
+        paddingHorizontal: 24,
+        marginTop:"5%"
     },
     title: {
         color: theme.colors.highlight,
