@@ -1,22 +1,28 @@
-import {StyleSheet} from "react-native"
+import { StyleSheet } from "react-native"
+import { theme } from "../../../theme"
 
 export const style = StyleSheet.create({
-    container:{
-        
+    container: {
+        width: "100%",
+        flexDirection: "row",
+        alignSelf:"center"
     },
-    content:{
+    content: {
+        flex: 1
+    },
+    header: {
 
     },
-    header:{
+    title: {
+        color: theme.colors.heading
+    },
+    category: {
+        color: theme.colors.heading
+    },
+    playerInfo: {
 
     },
-    title:{
-
-    },
-    category:{
-        
-    },
-    playerInfo:{
+    player: {
 
     }
 })

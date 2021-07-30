@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text } from "react-native"
+import { SvgProps } from "react-native-svg"
 import { RectButton, RectButtonProps } from "react-native-gesture-handler"
 import { theme } from "../../../theme";
 import { categories } from "../../utils/categories";
@@ -8,8 +9,10 @@ import PlayerSvg from "../../assets/player.svg"
 import { style } from "./style";
 
 export type GuildProps = {
-    owner: boolean;
+    id: string;
     name: string;
+    icon: React.FC<SvgProps>;
+    owner: boolean;
 }
 
 export type AppointmentsProps = {
@@ -26,7 +29,7 @@ type Props = RectButtonProps & {
 
 export function Appointments({ data, ...rest }: Props) {
     const [category] = categories.filter(item => item.id === data.category)
-
+    const { icon, id, name, owner } = data.guild
     return (
         <RectButton {...rest}>
             <View style={style.container}>
@@ -34,14 +37,18 @@ export function Appointments({ data, ...rest }: Props) {
                 <View style={style.content}>
                     <View style={style.header}>
                         <Text style={style.title}>
-                            {data.guild.name}
+                            {name}
                         </Text>
                         <Text style={style.category}>
                             {category.title}
                         </Text>
                     </View>
                     <View style={style.playerInfo}>
-                        <PlayerSvg fill={data.guild.owner ? theme.colors.primary : theme.colors.on} />
+                        <PlayerSvg fill={owner ? theme.colors.primary : theme.colors.on} />
+                        <Text style={[style.player,
+                        { color: owner ? theme.colors.primary : theme.colors.on }]}>
+                            {owner ? "Anfitrião" : "Visitante"}
+                        </Text>
                     </View>
                 </View>
             </View>

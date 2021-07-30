@@ -6,6 +6,7 @@ import { ButtonAdd } from "../../components/ButtonAdd";
 import { CategorySelect } from "../../components/CategorySelect";
 import { ListHeader } from "../../components/ListHeader";
 import { Appointments } from "../../components/Appointments";
+import PlayerSvg from "../../assets/player.svg"
 
 export function Home() {
 
@@ -15,7 +16,7 @@ export function Home() {
             guild: {
                 id: "1",
                 name: "Lendários",
-                icon: null,
+                icon: PlayerSvg,
                 owner: true
             },
             category: "1",
