@@ -8,6 +8,7 @@ import { ListHeader } from "../../components/ListHeader";
 import { Appointments } from "../../components/Appointments";
 import PlayerSvg from "../../assets/player.svg"
 import { ListDivider } from "../../components/ListDivider";
+import { Background } from "../../components/Background";
 
 export function Home() {
 
@@ -68,20 +69,22 @@ export function Home() {
     }
 
     return (
-        <View style={style.container}>
-            <View style={style.header}>
-                <Profile />
-                <ButtonAdd />
+        <Background>
+            <View style={style.container}>
+                <View style={style.header}>
+                    <Profile />
+                    <ButtonAdd />
+                </View>
+                <CategorySelect categorySelected={category} setCategory={handleCategorySelected} />
+                <ListHeader title={"Partidas agendadas"} subtitle={"Total 6"} />
+                <FlatList
+                    data={appointments}
+                    keyExtractor={item => item.id}
+                    renderItem={({ item }) => (
+                        <Appointments data={item} />
+                    )}
+                    ItemSeparatorComponent={() => <ListDivider />} />
             </View>
-            <CategorySelect categorySelected={category} setCategory={handleCategorySelected} />
-            <ListHeader title={"Partidas agendadas"} subtitle={"Total 6"} />
-            <FlatList
-                data={appointments}
-                keyExtractor={item => item.id}
-                renderItem={({ item }) => (
-                    <Appointments data={item} />
-                )}
-                ItemSeparatorComponent={() => <ListDivider />} />
-        </View>
+        </Background>
     )
 }
