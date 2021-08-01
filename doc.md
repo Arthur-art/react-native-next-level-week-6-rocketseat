@@ -37,3 +37,6 @@
 - expo install react-native-svg
 - https://github.com/kristerkari/react-native-svg-transformer
 - yarn add --dev react-native-svg-transformer
+
+# Trabalhando com react-native-iphone-x-helper
+- yarn add react-native-iphone-x-helper

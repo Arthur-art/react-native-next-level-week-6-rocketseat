@@ -9,6 +9,7 @@ import { Appointments } from "../../components/Appointments";
 import PlayerSvg from "../../assets/player.svg"
 import { ListDivider } from "../../components/ListDivider";
 import { Background } from "../../components/Background";
+import { useNavigation } from "@react-navigation/native";
 
 export function Home() {
 
@@ -64,8 +65,15 @@ export function Home() {
     ]
 
     const [category, setCategory] = useState("")
+
+    const navigation = useNavigation();
+
     const handleCategorySelected = (categoryId: string) => {
         categoryId === category ? setCategory('') : setCategory(categoryId)
+    }
+
+    const handleAppointmentsDetails = () => {
+        navigation.navigate("AppointmentsDetails")
     }
 
     return (
@@ -81,7 +89,9 @@ export function Home() {
                     data={appointments}
                     keyExtractor={item => item.id}
                     renderItem={({ item }) => (
-                        <Appointments data={item} />
+                        <Appointments
+                        onPress={handleAppointmentsDetails}
+                        data={item} />
                     )}
                     ItemSeparatorComponent={() => <ListDivider />} />
             </View>
