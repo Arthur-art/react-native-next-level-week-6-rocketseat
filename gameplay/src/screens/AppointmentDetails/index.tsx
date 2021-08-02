@@ -8,9 +8,8 @@ import { theme } from "../../../theme";
 import BannerPng from "../../assets/banner.png"
 import { style } from "./style"
 import { ListHeader } from "../../components/ListHeader";
-import { appointments } from "../Home";
-import { Appointments } from "../../components/Appointments";
 import { ListDivider } from "../../components/ListDivider";
+import { Member } from "../../components/Member";
 
 export const members = [
     {
@@ -61,7 +60,7 @@ export function AppointmentsDetails() {
                 data={members}
                 keyExtractor={item => item.id}
                 renderItem={({ item }) => (
-                    <Text style={{ color: theme.colors.heading }}>{item.username}</Text>
+                    <Member data={item} />
                 )}
                 ItemSeparatorComponent={() => <ListDivider />} />
         </Background>
