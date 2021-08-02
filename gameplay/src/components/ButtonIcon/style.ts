@@ -9,15 +9,15 @@ export const style = StyleSheet.create({
         marginTop: 15,
         borderRadius: 10,
         flexDirection: "row",
-        justifyContent: "space-between",
         alignItems: "center",
-        padding: 20
+        padding: 20,
+        justifyContent: "space-around"
 
     },
     iconWrapper: {
         borderRightWidth: 1,
         padding: "4%",
-        borderColor: theme.colors.line
+        borderColor: theme.colors.line,
     },
     title: {
         color: theme.colors.heading,

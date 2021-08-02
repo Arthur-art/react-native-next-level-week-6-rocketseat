@@ -25,6 +25,12 @@ export const members = [
         avatar_url: 'https://avatars.githubusercontent.com/u/54858003?v=4',
         status: 'offline'
     },
+    {
+        id: '3',
+        username: 'Arthur Teixeira',
+        avatar_url: 'https://avatars.githubusercontent.com/u/54858003?v=4',
+        status: 'online'
+    },
 ]
 
 export function AppointmentsDetails() {
@@ -56,7 +62,7 @@ export function AppointmentsDetails() {
 
             </ImageBackground>
 
-            <ListHeader title={"Jogadores"} subtitle={"total: 2"} />
+            <ListHeader title={"Jogadores"} subtitle={`Total: ${members.length}`} />
             <FlatList
                 data={members}
                 keyExtractor={item => item.id}
