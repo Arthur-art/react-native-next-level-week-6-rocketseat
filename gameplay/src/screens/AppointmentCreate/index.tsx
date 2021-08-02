@@ -1,35 +1,39 @@
 import React from "react";
+import { useState } from "react";
 import { ImageBackground, View, Text } from "react-native";
 import { Background } from "../../components/Background";
+import { CategorySelect } from "../../components/CategorySelect";
 import { Header } from "../../components/Header";
-import { Fontisto } from "@expo/vector-icons"
-import { BorderlessButton, FlatList } from "react-native-gesture-handler";
-import { theme } from "../../../theme";
-import BannerPng from "../../assets/banner.png"
-import { style } from "./style"
 import { ListHeader } from "../../components/ListHeader";
-import { ListDivider } from "../../components/ListDivider";
-import { Member } from "../../components/Member";
-import { ButtonIcon } from "../../components/ButtonIcon";
-
+import { style } from "./style"
+import { RectButton } from "react-native-gesture-handler"
 
 
 export function AppointmentsCreate() {
-    const { primary } = theme.colors
+    const [category, setCategory] = useState("")
 
-    const handleAppointmentsDetails = () => {
-        console.log("")
+    const handleCategorySelected = (categoryId: string) => {
+        categoryId === category ? setCategory('') : setCategory(categoryId)
     }
-
     return (
         <Background>
             <Header
-                title="Detalhes"
+                title="Agendar partidas"
             />
 
-            {/* <View style={style.footer}>
-                <ButtonIcon title={"Entrar na partida"} />
-            </View> */}
+            <ListHeader title={"Categoria"} subtitle={""} />
+
+            <CategorySelect categorySelected={category} setCategory={handleCategorySelected} />
+
+            <View style={style.form}>
+                <RectButton>
+                    <View style={style.select}>
+                        <View style={style.image} />
+                    </View>
+                </RectButton>
+            </View>
+
+
         </Background>
     )
 }
