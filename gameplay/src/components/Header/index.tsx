@@ -5,6 +5,7 @@ import { theme } from "../../../theme";
 import { BorderlessButton } from "react-native-gesture-handler"
 import { Feather } from "@expo/vector-icons"
 import { style } from "./style"
+import { useNavigation } from "@react-navigation/native";
 
 type Props = {
     title: string;
@@ -14,12 +15,18 @@ type Props = {
 export function Header({ title, action }: Props) {
     const { secondary100, secondary40, heading } = theme.colors;
 
+    const navigation = useNavigation();
+
+    const handleBack = () => {
+        navigation.goBack();
+    }
+
     return (
         <LinearGradient
             style={style.constainer}
             colors={[secondary100, secondary40]}
         >
-            <BorderlessButton>
+            <BorderlessButton onPress={handleBack}>
                 <Feather
                     name={"arrow-left"}
                     size={24}
