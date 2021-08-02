@@ -7,6 +7,9 @@ import { Header } from "../../components/Header";
 import { ListHeader } from "../../components/ListHeader";
 import { style } from "./style"
 import { RectButton } from "react-native-gesture-handler"
+import { Feather } from "@expo/vector-icons"
+import { theme } from "../../../theme";
+import { GuildIcon } from "../../components/GuildIcon";
 
 
 export function AppointmentsCreate() {
@@ -28,7 +31,22 @@ export function AppointmentsCreate() {
             <View style={style.form}>
                 <RectButton>
                     <View style={style.select}>
-                        <View style={style.image} />
+                        {
+                            //   <View style={style.image} />
+                            <GuildIcon />
+
+                        }
+
+                        <View style={style.selectBody}>
+                            <Text style={style.label}>Selecione um servidor</Text>
+                        </View>
+
+                        <Feather
+                            name={"chevron-right"}
+                            color={theme.colors.heading}
+                            size={25}
+                        />
+
                     </View>
                 </RectButton>
             </View>
