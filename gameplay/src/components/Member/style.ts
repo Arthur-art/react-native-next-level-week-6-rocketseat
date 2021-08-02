@@ -1,3 +1,4 @@
+import { Inter_100Thin, Inter_500Medium } from "@expo-google-fonts/inter";
 import { StyleSheet } from "react-native"
 import { theme } from "../../../theme"
 
@@ -19,10 +20,24 @@ export const style = StyleSheet.create({
         fontSize: 16
     },
     status: {
-
+        flexDirection: "row",
+        justifyContent: "space-around",
+        alignItems: "center",
     },
     statusText: {
         color: heading,
         fontFamily: text400
+    },
+    statusBallOn: {
+        backgroundColor: "green",
+        width: 10,
+        height: 10,
+        borderRadius: 5
+    },
+    statusBallOff: {
+        backgroundColor: "red",
+        width: 10,
+        height: 10,
+        borderRadius: 5
     }
 })

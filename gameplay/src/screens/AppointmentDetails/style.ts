@@ -20,5 +20,10 @@ export const style = StyleSheet.create({
         color: heading,
         fontSize: 20,
         fontFamily: text400
-    }
+    },
+    footer: {
+        width: "100%",
+        justifyContent: "space-around",
+        alignItems: "center"
+    }   
 })

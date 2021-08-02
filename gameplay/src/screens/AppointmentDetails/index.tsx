@@ -10,6 +10,7 @@ import { style } from "./style"
 import { ListHeader } from "../../components/ListHeader";
 import { ListDivider } from "../../components/ListDivider";
 import { Member } from "../../components/Member";
+import { ButtonIcon } from "../../components/ButtonIcon";
 
 export const members = [
     {
@@ -63,6 +64,10 @@ export function AppointmentsDetails() {
                     <Member data={item} />
                 )}
                 ItemSeparatorComponent={() => <ListDivider />} />
+
+            <View style={style.footer}>
+                <ButtonIcon title={"Entrar na partida"} />
+            </View>
         </Background>
     )
 }
