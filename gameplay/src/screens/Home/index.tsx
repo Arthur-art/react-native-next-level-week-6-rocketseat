@@ -11,58 +11,58 @@ import { ListDivider } from "../../components/ListDivider";
 import { Background } from "../../components/Background";
 import { useNavigation } from "@react-navigation/native";
 
-export function Home() {
-
-    const appointments = [
-        {
+export const appointments = [
+    {
+        id: "1",
+        guild: {
             id: "1",
-            guild: {
-                id: "1",
-                name: "Lendários",
-                icon: PlayerSvg,
-                owner: true
-            },
-            category: "1",
-            date: "22/06 às 20:40h",
-            description: "Que cara bom vei, que cara excelente"
+            name: "Lendários",
+            icon: PlayerSvg,
+            owner: true
         },
-        {
+        category: "1",
+        date: "22/06 às 20:40h",
+        description: "Que cara bom vei, que cara excelente"
+    },
+    {
+        id: "2",
+        guild: {
             id: "2",
-            guild: {
-                id: "2",
-                name: "Lendários",
-                icon: PlayerSvg,
-                owner: true
-            },
-            category: "1",
-            date: "22/06 às 20:40h",
-            description: "Que cara bom vei, que cara excelente"
+            name: "Lendários",
+            icon: PlayerSvg,
+            owner: true
         },
-        {
+        category: "1",
+        date: "22/06 às 20:40h",
+        description: "Que cara bom vei, que cara excelente"
+    },
+    {
+        id: "3",
+        guild: {
             id: "3",
-            guild: {
-                id: "3",
-                name: "Lendários",
-                icon: PlayerSvg,
-                owner: true
-            },
-            category: "1",
-            date: "22/06 às 20:40h",
-            description: "Que cara bom vei, que cara excelente"
+            name: "Lendários",
+            icon: PlayerSvg,
+            owner: true
         },
-        {
-            id: "4",
-            guild: {
-                id: "1",
-                name: "Lendários",
-                icon: PlayerSvg,
-                owner: true
-            },
-            category: "4",
-            date: "22/06 às 20:40h",
-            description: "Que cara bom vei, que cara excelente"
-        }
-    ]
+        category: "1",
+        date: "22/06 às 20:40h",
+        description: "Que cara bom vei, que cara excelente"
+    },
+    {
+        id: "4",
+        guild: {
+            id: "1",
+            name: "Lendários",
+            icon: PlayerSvg,
+            owner: true
+        },
+        category: "4",
+        date: "22/06 às 20:40h",
+        description: "Que cara bom vei, que cara excelente"
+    }
+]
+
+export function Home() {
 
     const [category, setCategory] = useState("")
 
@@ -90,8 +90,8 @@ export function Home() {
                     keyExtractor={item => item.id}
                     renderItem={({ item }) => (
                         <Appointments
-                        onPress={handleAppointmentsDetails}
-                        data={item} />
+                            onPress={handleAppointmentsDetails}
+                            data={item} />
                     )}
                     ItemSeparatorComponent={() => <ListDivider />} />
             </View>
