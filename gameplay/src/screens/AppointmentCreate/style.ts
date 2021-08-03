@@ -57,5 +57,8 @@ export const style = StyleSheet.create({
     containerDescription: {
         flexDirection: "row",
         justifyContent: "space-between"
+    },
+    listDivider:{
+        marginBottom: "30%"
     }
 })

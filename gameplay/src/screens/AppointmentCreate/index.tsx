@@ -12,6 +12,7 @@ import { theme } from "../../../theme";
 import { GuildIcon } from "../../components/GuildIcon";
 import { SmallInput } from "../../components/SmallInput";
 import { TextArea } from "../../components/TextArea";
+import { ButtonScheduling } from "../../components/ButtonScheduling";
 
 
 export function AppointmentsCreate() {
@@ -89,7 +90,11 @@ export function AppointmentsCreate() {
 
                     <TextArea multiline maxLength={100} numberOfLines={5} />
 
+                    <ButtonScheduling activeOpacity={0.7} title={"Agendar"} />
+
+                    <View style={style.listDivider} />
                 </View>
+
             </ScrollView>
         </KeyboardAvoidingView>
     )
