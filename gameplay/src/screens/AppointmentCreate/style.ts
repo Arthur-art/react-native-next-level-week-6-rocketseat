@@ -39,6 +39,19 @@ export const style = StyleSheet.create({
         alignItems: "center"
     },
     field: {
-
+        width: "100%",
+        flexDirection: "row",
+        justifyContent: "space-between",
+        marginTop: 30
+    },
+    column: {
+        flexDirection: "row",
+        alignItems: "center"
+    },
+    divider: {
+        marginRight: 4,
+        fontSize: 18,
+        fontFamily: theme.fonts.text500,
+        color: theme.colors.highlight
     }
 })

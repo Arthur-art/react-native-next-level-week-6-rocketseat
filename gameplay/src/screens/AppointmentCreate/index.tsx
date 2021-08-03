@@ -47,21 +47,34 @@ export function AppointmentsCreate() {
                             color={theme.colors.heading}
                             size={25}
                         />
-
                     </View>
                 </RectButton>
-
                 <View style={style.field}>
+
                     <View>
-                        <Text></Text>
-                        <SmallInput />
+                        <Text style={style.label}>Dia e Mês</Text>
+                        <View style={style.column}>
+                            <SmallInput maxLength={2} />
+                            <Text style={style.divider}>
+                                /
+                            </Text>
+                            <SmallInput maxLength={2} />
+                        </View>
                     </View>
+
+                    <View>
+                        <Text style={style.label}>Horas e Minutos</Text>
+                        <View style={style.column}>
+                            <SmallInput maxLength={2} />
+                            <Text style={style.divider}>
+                                :
+                            </Text>
+                            <SmallInput maxLength={2} />
+                        </View>
+                    </View>
+
                 </View>
-
-
             </View>
-
-
         </Background>
     )
 }
