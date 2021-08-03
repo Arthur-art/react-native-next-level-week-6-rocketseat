@@ -37,5 +37,8 @@ export const style = StyleSheet.create({
     selectBody: {
         flex: 1,
         alignItems: "center"
+    },
+    field: {
+
     }
 })

@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { ImageBackground, View, Text } from "react-native";
+import { View, Text } from "react-native";
 import { Background } from "../../components/Background";
 import { CategorySelect } from "../../components/CategorySelect";
 import { Header } from "../../components/Header";
@@ -10,6 +10,7 @@ import { RectButton } from "react-native-gesture-handler"
 import { Feather } from "@expo/vector-icons"
 import { theme } from "../../../theme";
 import { GuildIcon } from "../../components/GuildIcon";
+import { SmallInput } from "../../components/SmallInput";
 
 
 export function AppointmentsCreate() {
@@ -49,6 +50,15 @@ export function AppointmentsCreate() {
 
                     </View>
                 </RectButton>
+
+                <View style={style.field}>
+                    <View>
+                        <Text></Text>
+                        <SmallInput />
+                    </View>
+                </View>
+
+
             </View>
 
 
