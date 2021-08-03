@@ -53,5 +53,9 @@ export const style = StyleSheet.create({
         fontSize: 18,
         fontFamily: theme.fonts.text500,
         color: theme.colors.highlight
+    },
+    containerDescription: {
+        flexDirection: "row",
+        justifyContent: "space-between"
     }
 })

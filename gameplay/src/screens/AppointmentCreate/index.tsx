@@ -11,6 +11,7 @@ import { Feather } from "@expo/vector-icons"
 import { theme } from "../../../theme";
 import { GuildIcon } from "../../components/GuildIcon";
 import { SmallInput } from "../../components/SmallInput";
+import { TextArea } from "../../components/TextArea";
 
 
 export function AppointmentsCreate() {
@@ -74,6 +75,15 @@ export function AppointmentsCreate() {
                     </View>
 
                 </View>
+
+                <View style={style.containerDescription}>
+                    <Text style={style.label}>Descrição</Text>
+                    
+                    <Text style={style.label}>Max 100 caracteres</Text>
+                </View>
+
+                <TextArea multiline maxLength={100} numberOfLines={5} />
+
             </View>
         </Background>
     )
