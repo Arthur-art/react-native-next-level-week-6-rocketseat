@@ -21,9 +21,8 @@ export function Guild({ data, ...rest }: Props) {
     return (
         <TouchableOpacity {...rest} activeOpacity={0.7} style={style.container}>
             <GuildIcon />
-
             <View style={style.content}>
-                <View>
+                <View style={style.text}>
                     <Text style={style.title}>{data.name}</Text>
                     <Text style={style.type}>{data.owner ? "Administrador" : "Convidado"}</Text>
                 </View>

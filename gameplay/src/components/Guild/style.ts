@@ -6,11 +6,13 @@ export const style = StyleSheet.create({
         width: "100%",
         flexDirection: "row",
         alignItems: "center",
-        paddingHorizontal: 24,
+        paddingHorizontal: 20,
+        justifyContent: "center"
     },
     content: {
         flex: 1,
-        justifyContent: "center"
+        justifyContent: "center",
+        width: "100%"
     },
     type: {
         fontFamily: theme.fonts.text400,
@@ -23,6 +25,14 @@ export const style = StyleSheet.create({
         color: theme.colors.heading,
         fontSize: 18,
         marginBottom: 11
+    },
+    text:{
+        justifyContent: "center",
+        width: "100%",
+        marginLeft: "20%",
+        marginTop: "10%"
+
+    
     }
 
 })

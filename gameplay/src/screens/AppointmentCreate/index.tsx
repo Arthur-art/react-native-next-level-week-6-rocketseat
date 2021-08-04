@@ -13,10 +13,24 @@ import { SmallInput } from "../../components/SmallInput";
 import { TextArea } from "../../components/TextArea";
 import { ButtonScheduling } from "../../components/ButtonScheduling";
 import { Background } from "../../components/Background";
+import { ModalView } from "../../components/ModalView";
+import { Guilds } from "../../components/Guilds";
+import { GuildProps } from "../../components/Appointments";
 
 
 export function AppointmentsCreate() {
     const [category, setCategory] = useState("")
+    const [openGuildsModal, setOpenGuildsModal] = useState(false)
+    const [guild, setGuild] = useState<GuildProps>({} as GuildProps)
+
+    const handleOpenGuildsModal = () => {
+        setOpenGuildsModal(true)
+    }
+
+    const handleGuildSelected = (guildSelected: GuildProps) => {
+        setGuild(guildSelected)
+        setOpenGuildsModal(true)
+    }
 
     const handleCategorySelected = (categoryId: string) => {
         categoryId === category ? setCategory('') : setCategory(categoryId)
@@ -38,7 +52,7 @@ export function AppointmentsCreate() {
                     <CategorySelect categorySelected={category} setCategory={handleCategorySelected} />
 
                     <View style={style.form}>
-                        <RectButton>
+                        <RectButton onPress={handleOpenGuildsModal}>
                             <View style={style.select}>
                                 {
                                     //<View style={style.image} />
@@ -97,6 +111,11 @@ export function AppointmentsCreate() {
                     </View>
 
                 </ScrollView>
+
+                <ModalView visible={openGuildsModal}>
+                    <Guilds />
+                </ModalView>
+
             </KeyboardAvoidingView>
         </Background>
     )

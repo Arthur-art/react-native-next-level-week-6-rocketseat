@@ -14,7 +14,7 @@ export const guilds = [
     },
 ]
 
-export function ModalGuilds() {
+export function Guilds() {
 
     return (
         <View style={style.container}>
