@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, FlatList } from "react-native";
+import { View, FlatList } from "react-native";
 import { style } from "./style"
 import { Profile } from "../../components/Profile"
 import { ButtonAdd } from "../../components/ButtonAdd";

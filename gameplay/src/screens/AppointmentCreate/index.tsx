@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
 import { View, Text, ScrollView, KeyboardAvoidingView, Platform } from "react-native";
-import { Background } from "../../components/Background";
 import { CategorySelect } from "../../components/CategorySelect";
 import { Header } from "../../components/Header";
 import { ListHeader } from "../../components/ListHeader";
