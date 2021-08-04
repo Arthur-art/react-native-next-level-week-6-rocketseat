@@ -12,6 +12,7 @@ export function ModalView({ closeModal, children, ...rest }: Props) {
 
     return (
         <Modal
+            statusBarTranslucent
             transparent
             animationType="slide"
             {...rest}
