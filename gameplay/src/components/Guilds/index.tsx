@@ -2,6 +2,7 @@ import React from "react";
 import { View } from "react-native"
 import { FlatList } from "react-native-gesture-handler";
 import { Guild } from "../Guild";
+import { ListDivider } from "../ListDivider";
 import { style } from "./style";
 
 export const guilds = [
@@ -23,6 +24,9 @@ export function ModalGuilds() {
                 renderItem={({ item }) => (
                     <Guild data={item} />
                 )}
+                showsVerticalScrollIndicator={false}
+                ItemSeparatorComponent={() => <ListDivider />}
+                style={style.guilds}
             />
 
         </View>
