@@ -27,6 +27,10 @@ export function AppointmentsCreate() {
         setOpenGuildsModal(true)
     }
 
+    const closeModal = () => {
+        setOpenGuildsModal(false)
+    }
+
     const handleGuildSelected = (guildSelected: GuildProps) => {
         setGuild(guildSelected)
         setOpenGuildsModal(false)
@@ -109,7 +113,7 @@ export function AppointmentsCreate() {
 
                 </ScrollView>
 
-                <ModalView visible={openGuildsModal}>
+                <ModalView visible={openGuildsModal} closeModal={closeModal}>
                     <Guilds handleGuildSelected={handleGuildSelected} />
                 </ModalView>
 
