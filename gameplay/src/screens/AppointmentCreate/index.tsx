@@ -29,7 +29,7 @@ export function AppointmentsCreate() {
 
     const handleGuildSelected = (guildSelected: GuildProps) => {
         setGuild(guildSelected)
-        setOpenGuildsModal(true)
+        setOpenGuildsModal(false)
     }
 
     const handleCategorySelected = (categoryId: string) => {
@@ -54,14 +54,11 @@ export function AppointmentsCreate() {
                     <View style={style.form}>
                         <RectButton onPress={handleOpenGuildsModal}>
                             <View style={style.select}>
-                                {
-                                    //<View style={style.image} />
-                                    <GuildIcon />
 
-                                }
+                                {guild.icon ? <GuildIcon /> : <View style={style.image} />}
 
                                 <View style={style.selectBody}>
-                                    <Text style={style.label}>Selecione um servidor</Text>
+                                    <Text style={style.label}>{guild.name ? guild.name : "Selecione um servidor"}</Text>
                                 </View>
 
                                 <Feather
@@ -113,7 +110,7 @@ export function AppointmentsCreate() {
                 </ScrollView>
 
                 <ModalView visible={openGuildsModal}>
-                    <Guilds />
+                    <Guilds handleGuildSelected={handleGuildSelected} />
                 </ModalView>
 
             </KeyboardAvoidingView>
