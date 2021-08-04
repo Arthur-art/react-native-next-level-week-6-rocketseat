@@ -51,15 +51,63 @@ export const appointments = [
     {
         id: "4",
         guild: {
-            id: "1",
+            id: "4",
             name: "Lendários",
             icon: PlayerSvg,
             owner: true
         },
-        category: "4",
+        category: "1",
         date: "22/06 às 20:40h",
         description: "Que cara bom vei, que cara excelente"
-    }
+    },
+    {
+        id: "5",
+        guild: {
+            id: "5",
+            name: "Lendários",
+            icon: PlayerSvg,
+            owner: true
+        },
+        category: "1",
+        date: "22/06 às 20:40h",
+        description: "Que cara bom vei, que cara excelente"
+    },
+    {
+        id: "6",
+        guild: {
+            id: "6",
+            name: "Lendários",
+            icon: PlayerSvg,
+            owner: true
+        },
+        category: "1",
+        date: "22/06 às 20:40h",
+        description: "Que cara bom vei, que cara excelente"
+    },
+    {
+        id: "7",
+        guild: {
+            id: "3",
+            name: "Lendários",
+            icon: PlayerSvg,
+            owner: true
+        },
+        category: "1",
+        date: "22/06 às 20:40h",
+        description: "Que cara bom vei, que cara excelente"
+    },
+    {
+        id: "8",
+        guild: {
+            id: "8",
+            name: "Lendários",
+            icon: PlayerSvg,
+            owner: true
+        },
+        category: "1",
+        date: "22/06 às 20:40h",
+        description: "Que cara bom vei, que cara excelente"
+    },
 ]
 
 export function Home() {
@@ -90,6 +138,7 @@ export function Home() {
                 <CategorySelect categorySelected={category} setCategory={handleCategorySelected} />
                 <ListHeader title={"Partidas agendadas"} subtitle={"Total 6"} />
                 <FlatList
+                    contentContainerStyle={{paddingBottom: 50}}
                     data={appointments}
                     keyExtractor={item => item.id}
                     renderItem={({ item }) => (

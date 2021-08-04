@@ -13,6 +13,48 @@ export const guilds = [
         icon: "true",
         owner: true
     },
+    {
+        id: "2",
+        name: "Lendários",
+        icon: "true",
+        owner: true
+    },
+    {
+        id: "3",
+        name: "Lendários",
+        icon: "true",
+        owner: true
+    },
+    {
+        id: "4",
+        name: "Lendários",
+        icon: "true",
+        owner: true
+    },
+    {
+        id: "5",
+        name: "Lendários",
+        icon: "true",
+        owner: true
+    },
+    {
+        id: "6",
+        name: "Lendários",
+        icon: "true",
+        owner: true
+    },
+    {
+        id: "7",
+        name: "Lendários",
+        icon: "true",
+        owner: true
+    },
+    {
+        id: "8",
+        name: "Lendários",
+        icon: "true",
+        owner: true
+    },
 ]
 
 type Props = {
@@ -24,6 +66,7 @@ export function Guilds({ handleGuildSelected }: Props) {
     return (
         <View style={style.container}>
             <FlatList
+                contentContainerStyle={{paddingBottom: 50}}
                 data={guilds}
                 keyExtractor={item => item.id}
                 renderItem={({ item }) => (

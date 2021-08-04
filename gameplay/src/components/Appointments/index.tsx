@@ -13,7 +13,7 @@ import CalendarSvg from "../../assets/calendar.svg"
 export type GuildProps = {
     id: string;
     name: string;
-    icon: null;
+    icon: React.FC<SvgProps> | null;
     owner: boolean;
 }
 
