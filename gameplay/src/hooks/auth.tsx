@@ -1,4 +1,5 @@
 import React, { createContext, ReactNode, useState } from "react";
+import { useContext } from "react";
 
 type User = {
     id: string;
@@ -19,20 +20,21 @@ type AuthContextProps = {
 
 export const AuthContext = createContext({} as AuthContextData)
 
-export function AuthProvider({ children }: AuthContextProps) {
-
+function AuthProvider({ children }: AuthContextProps) {
+    const [user, setUser] = useState<User>({} as User)
     return (
-        <AuthContext.Provider value={{
-            user: {
-                id: "1",
-                username: "Arthur",
-                firstname: "Teixeira",
-                avatar: null,
-                email: "arthurteixeira.guts@gmail.com",
-                token: "string",
-            }
-        }}>
+        <AuthContext.Provider value={{ user }}>
             {children}
         </AuthContext.Provider>
     )
+}
+
+function useAuth() {
+    const context = useContext(AuthContext);
+    return context;
+}
+
+export {
+    useAuth,
+    AuthProvider
 }

@@ -11,7 +11,7 @@ import { ListDivider } from "../../components/ListDivider";
 import { Background } from "../../components/Background";
 import { useNavigation } from "@react-navigation/native";
 import { useContext } from "react";
-import { AuthContext } from "../../hooks/auth";
+import { AuthContext, useAuth } from "../../hooks/auth";
 
 export const appointments = [
     {
@@ -130,8 +130,9 @@ export function Home() {
         navigation.navigate("AppointmentsCreate")
     }
 
-    const context = useContext(AuthContext);
-    console.log(context)
+    const context = useAuth();
+
+    console.log("context", context)
 
     return (
         <Background>
@@ -143,7 +144,7 @@ export function Home() {
                 <CategorySelect categorySelected={category} setCategory={handleCategorySelected} />
                 <ListHeader title={"Partidas agendadas"} subtitle={"Total 6"} />
                 <FlatList
-                    contentContainerStyle={{paddingBottom: 50}}
+                    contentContainerStyle={{ paddingBottom: 50 }}
                     data={appointments}
                     keyExtractor={item => item.id}
                     renderItem={({ item }) => (
