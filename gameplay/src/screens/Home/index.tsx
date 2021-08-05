@@ -130,9 +130,7 @@ export function Home() {
         navigation.navigate("AppointmentsCreate")
     }
 
-    const context = useAuth();
-
-    console.log("context", context)
+    const { user } = useAuth();
 
     return (
         <Background>
