@@ -43,3 +43,10 @@
 
 # Registrando app no discord
 - discord.com/developers/applications
+
+# Trabalhando com auth do expo para gerar um hash de autentificacao com o servidor do discord
+- https://docs.expo.dev/versions/latest/sdk/auth-session/
+- expo install expo-auth-session expo-random
+  
+# Trabalhando com axios
+- yarn add axios
