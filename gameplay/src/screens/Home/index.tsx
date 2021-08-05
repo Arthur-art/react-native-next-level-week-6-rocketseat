@@ -10,6 +10,8 @@ import PlayerSvg from "../../assets/player.svg"
 import { ListDivider } from "../../components/ListDivider";
 import { Background } from "../../components/Background";
 import { useNavigation } from "@react-navigation/native";
+import { useContext } from "react";
+import { AuthContext } from "../../hooks/auth";
 
 export const appointments = [
     {
@@ -127,6 +129,9 @@ export function Home() {
     const handleAppointmentCreate = () => {
         navigation.navigate("AppointmentsCreate")
     }
+
+    const context = useContext(AuthContext);
+    console.log(context)
 
     return (
         <Background>

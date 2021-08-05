@@ -5,7 +5,7 @@ import { Inter_400Regular, Inter_500Medium } from "@expo-google-fonts/inter";
 import { Rajdhani_500Medium, Rajdhani_700Bold } from "@expo-google-fonts/rajdhani";
 import AppLoading from "expo-app-loading"
 import { Routes } from "./src/routes";
-import { AuthContext } from "./src/context/auth";
+import { AuthContext, AuthProvider } from "./src/hooks/auth";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -24,9 +24,9 @@ export default function App() {
       <StatusBar
         barStyle="light-content"
       />
-      <AuthContext.Provider value={{}}>
+      <AuthProvider>
         <Routes />
-      </AuthContext.Provider>
+      </AuthProvider>
     </>
   );
 }
