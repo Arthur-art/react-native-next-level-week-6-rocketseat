@@ -40,3 +40,6 @@
 
 # Trabalhando com react-native-iphone-x-helper
 - yarn add react-native-iphone-x-helper
+
+# Registrando app no discord
+- discord.com/developers/applications
