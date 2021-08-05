@@ -9,7 +9,7 @@ import { useAuth } from "../../hooks/auth";
 
 export function Signin() {
 
-    const { user } = useAuth();
+    const { user, signIn } = useAuth();
 
     const navigation = useNavigation();
 

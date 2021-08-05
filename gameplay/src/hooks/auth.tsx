@@ -1,6 +1,8 @@
 import React, { createContext, ReactNode, useState } from "react";
 import { useContext } from "react";
 import * as AuthSession from "expo-auth-session"
+import { CDN_IMAGE, CLIENT_ID, RESPONSE_TYPE, ESCOPO, REDIRECT_URI } from "../config"
+import { api } from "../services/api";
 
 type User = {
     id: string;
@@ -13,6 +15,7 @@ type User = {
 
 type AuthContextData = {
     user: User;
+    signIn: () => Promise<void>
 }
 
 type AuthContextProps = {
@@ -24,11 +27,12 @@ export const AuthContext = createContext({} as AuthContextData)
 function AuthProvider({ children }: AuthContextProps) {
     const [user, setUser] = useState<User>({} as User)
     const [loading, setLoading] = useState(false)
+    const { baseURL } = api.defaults
 
-    function signIn() {
+    async function signIn() {
         try {
             setLoading(true)
-            const authUrl = "https://discord.com/api/oauth2/authorize?client_id=872851343663042630&redirect_uri=https%3A%2F%2Fauth.expo.io%2Fgameplay&response_type=code&scope=identify%20email%20connections%20guilds"
+            const authUrl = `${baseURL}/oauth2/authorize?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}&scope=${ESCOPO}`
 
             AuthSession
                 .startAsync({ authUrl })
@@ -39,7 +43,7 @@ function AuthProvider({ children }: AuthContextProps) {
     }
 
     return (
-        <AuthContext.Provider value={{ user }}>
+        <AuthContext.Provider value={{ user, signIn }}>
             {children}
         </AuthContext.Provider>
     )
